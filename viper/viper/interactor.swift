@@ -18,7 +18,7 @@ class UserInteractor: AnyInteractor {
     var presenter: AnyPresenter?
     
     func getUsers() {
-        guard let url = URL(string: "https://jsonplaceholder.tpyicode.com/users") else { return }
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else { return }
         let task = URLSession.shared.dataTask(with: url) {data, _, error in
             guard let data = data, error == nil else {
                 self.presenter?.interactorDidFetchUsers(with: .failure(FetchError.failed))
